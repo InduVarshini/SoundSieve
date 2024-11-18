@@ -24,8 +24,11 @@ This worker handles the task of separating audio tracks (e.g., vocals, bass, dru
 worker/
 
 ├── Dockerfile       # Dockerfile for building the worker server image.
+
 ├── Makefile         # Automates build, test, and deploy processes.
+
 ├── worker.py   # Main WORKER server application code.
+
 ├── worker-deployment.yaml # Kubernetes deployment configuration.
 
 
