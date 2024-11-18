@@ -1,0 +1,29 @@
+#Make sure to change the image name to your own docker image name
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demucs-rest-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demucs-rest-api
+  template:
+    metadata:
+      labels:
+        app: demucs-rest-api
+    spec:
+      containers:
+        - name: demucs-rest-api
+          image: varzzz/demucs-rest:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5050
+              protocol: TCP
+          env:
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: MINIO_HOST
+              value: "minio:9000"

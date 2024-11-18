@@ -1,0 +1,14 @@
+# Use the existing python Docker image as the base
+FROM python:3.8-slim
+
+# Move to the /app directory in the container
+WORKDIR /app
+
+# Copy worker code into the container
+COPY rest-server.py /app
+
+# Install dependencies to run the REST server
+RUN pip install flask redis jsonpickle minio
+
+# Define the command to run the REST server
+CMD ["python", "rest-server.py"]

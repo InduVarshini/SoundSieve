@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-ingress-service
+spec:
+  selector:
+    app: demucs-rest-api
+  ports:
+    - protocol: TCP
+      port: 8080  # External port
+      targetPort: 5050  # Internal port
+  type: LoadBalancer  # Automatically provisions an external IP if on a cloud provider

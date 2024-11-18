@@ -1,0 +1,29 @@
+#Make sure to change the image name to your own docker image name
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demucs-worker
+spec:
+  selector:
+    matchLabels:
+      app: demucs-worker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demucs-worker
+    spec:
+      containers:
+      - name: demucs-worker
+        image: varzzz/demucs-worker:latest
+        imagePullPolicy: Always
+        
+        env:
+        - name: REDIS_HOST
+          value: "redis"
+        - name: REDIS_PORT
+          value: "6379"
+        - name: MINIO_HOST
+          value: "minio:9000"
+        - name: MINIO_BUCKET 
+          value: "songs"
