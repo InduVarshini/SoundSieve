@@ -24,19 +24,15 @@ This REST server facilitates the separation of audio tracks (e.g., vocals, bass,
 
 ## File Structure
 
-rest/
+### rest/
 
-├── Dockerfile       # Dockerfile for building the REST server image.
+- `Dockerfile`         # Dockerfile for building the REST server image.
+- `Makefile`           # Automates build, test, and deploy processes.
+- `rest-server.py`     # Main REST server application code.
+- `rest-ingress.yaml`  # Kubernetes ingress configuration.
+- `rest-service.yaml`  # Kubernetes service configuration.
+- `rest-deployment.yaml` # Kubernetes deployment configuration.
 
-├── Makefile         # Automates build, test, and deploy processes.
-
-├── rest-server.py   # Main REST server application code.
-
-├── rest-ingress.yaml     # Kubernetes ingress configuration.
-
-├── rest-service.yaml     # Kubernetes service configuration.
-
-├── rest-deployment.yaml # Kubernetes deployment configuration.
 
 
 ## API Endpoints
