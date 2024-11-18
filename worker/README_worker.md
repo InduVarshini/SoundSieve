@@ -22,6 +22,7 @@ This worker handles the task of separating audio tracks (e.g., vocals, bass, dru
 ## File Structure
 
 worker/
+
 ├── Dockerfile       # Dockerfile for building the worker server image.
 ├── Makefile         # Automates build, test, and deploy processes.
 ├── worker.py   # Main WORKER server application code.
