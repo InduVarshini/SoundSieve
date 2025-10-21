@@ -44,8 +44,8 @@ Before starting, ensure you have the following:
 
 ### 1. Clone Repository  
 ```bash  
-git clone https://github.com/your-repo-name/lab7-music-separation-kubernetes.git  
-cd lab7-music-separation-kubernetes  
+git clone https://github.com/InduVarshini/SoundSieve.git
+cd SoundSieve  
 ```  
 
 ### 2. Set Up Min.io  
