@@ -28,6 +28,8 @@ The MSaaS system comprises the following components:
 3. **Worker**: Executes the computationally expensive music separation tasks using Demucs.  
 4. **Min.io**: Stores MP3 files and separated tracks in "queue" and "output" buckets.  
 
+Below is architecture/data flow diagram:
+![MSaaS](https://github.com/InduVarshini/SoundSieve/blob/main/SoundSeive_ArchDiagram.png)  
 
 ## Prerequisites  
 
